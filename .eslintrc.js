@@ -19,11 +19,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-first-prop-new-line': [1, 'multiline'],
-        'react/jsx-max-props-per-line': [1,
-            {
-                'maximum': 1
-            }
-        ],
+    'react/jsx-max-props-per-line': [1, { maximum: 1, when: 'multiline' }],
     'import/prefer-default-export': 'off',
     'no-param-reassign': 'off',
     'import/extensions': [

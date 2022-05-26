@@ -8,9 +8,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { email, password } = req.body
 
   const user = await prisma.user.findUnique({
-    where: { 
+    where: {
       email,
-     },
+    },
   })
 
   if (user && bcrypt.compareSync(password, user.password)) {
@@ -34,7 +34,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         secure: process.env.NODE_ENV === 'production',
       })
     )
-    res.json(user);
+    res.json(user)
   } else {
     res.status(401)
     res.json({ error: 'Email or Password is wrong' })
