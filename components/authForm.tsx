@@ -25,8 +25,7 @@ const AuthForm: FC<{ mode: 'signin' | 'signup' }> = ({ mode }) => {
         justify="center"
         align="center"
         height="100px"
-        borderBottom="white 1px solid"
-      >
+        borderBottom="white 1px solid">
         <NextImage src="/logo.svg" height={60} width={120} />
       </Flex>
       <Flex justify="center" align="center" height="calc(100vh - 100px)">
@@ -46,8 +45,7 @@ const AuthForm: FC<{ mode: 'signin' | 'signup' }> = ({ mode }) => {
               type="submit"
               bg="green.500"
               isLoading={isLoading}
-              sx={{ '&:hover': { bg: 'green.300' } }}
-            >
+              sx={{ '&:hover': { bg: 'green.300' } }}>
               {mode}
             </Button>
           </form>
